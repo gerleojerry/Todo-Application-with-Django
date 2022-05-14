@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: verdana;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+#add-button {
+  border: 2px solid  transparent;
+  outline: 2px solid transparent;
+  cursor: pointer;
+  background-color: #12A399;
+  color: white;
+  padding: .22rem;
+  border-radius: 4px;
+}
+
+#add-button:active {
+  transform : scale(0.97)
+}
+
+.tasks_collection {
+  width: 60%;
+  margin: auto;
+}
+
+.tasks_container {
+  width: 60%;
+  margin: auto;
+}
+
+#time {
+  font-weight: 500;
+  font-family: monospace;
+  
+}
+
+
+a {
+  color: #30c5bb ;
+}
+
+input {
+  outline: none !important;
+}
+
+header {
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+}

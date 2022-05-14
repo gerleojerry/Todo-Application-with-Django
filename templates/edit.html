@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html 
+{% load static %}
+{% load  crispy_forms_tags %}
+lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index HTML and CSS </title>
+  <link rel="stylesheet" href="{%static 'application/css/bootstrap.css' %}">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand font-weight-bold">DJANGO PLAY</a>
+      </nav>
+    </header>
+    <!-- END OF THE HEADER -->
+    
+    <div class="content">
+      <!-- START OF THE TASKS COLLECTION FORM  -->
+      <section class = "my-5 tasks_collection">
+
+        
+        <form class = "border" method = "POST" action = "{% url 'edit' id %}" style = "width: 45%; margin: auto;">
+          <h4 class = "my-3 pl-4 ml-1 " >Update Task</h4>
+          {% csrf_token %}
+          <div class="col">
+            <div class="col-md-10  ">
+              
+              {{form.task | as_crispy_field}}
+
+            </div>
+          
+            <div class="col-md-5 d-flex align-items-end">
+              <button id ="add-button" type="submit" class="btn btn-sm btn-primary mb-2"> Update Task. </button>
+              
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+    <!-- THIS IS THE END OF THE CONTENT OF THE SECTION  -->
+    
+  </div>
+
+  <!-- THIS IS THE END OF THE WRAPPER OF THE HTML FILE  -->
+  
+</body> 
+</html>

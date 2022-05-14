@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: verdana;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  align-items: center;
+  height: 7vh;
+}
+
+form {
+  width: 80%;
+  margin: 10px auto;
+}
+
+button {
+  padding: 4px 9px;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  border: 2px solid #dedede;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  margin: 15px auto;
+  background-color: whitesmoke;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+form h3 {
+  margin: 20px 0;
+}
+
+li * {
+  list-style-type: none;
+}

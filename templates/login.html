@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'application/css/bootstrap.css' %}">
+  <title> Login | Login</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class = "d-flex justify-content-between  align-items-center p-3">
+      <span class = "font-weight-bold display-6 lead">APPLICATION</span>
+
+      <nav>
+        <a class= "btn btn-outline-primary btn-md" href="{% url 'signup' %}"> Signup </a>
+      </nav> 
+
+    </header>
+
+  <!-- This is the end of the header part of the sign up page  -->
+
+  <div class="mt-5">
+
+    {% if messages %}
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+
+    {% endif %}
+
+    <div class="form_container">
+
+      <form style = "width: 40%; margin: auto;" class = "form_element" method = "POST" action = "{% url 'login' %}">
+        {% csrf_token %}
+        <h3 class=  "my-3">LOGIN </h3>
+        {{form | crispy}}
+       
+        <button class = "btn btn-primary btn-md" type="submit">Login</button>
+      </form>
+    </div>
+
+  </div>
+  
+</body>
+</html>
